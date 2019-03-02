@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		490473A521FA56D0009BE7F6 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 490473A321FA56D0009BE7F6 /* Application.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		490473AC21FA56E0009BE7F6 /* Architecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490473AB21FA56E0009BE7F6 /* Architecture.swift */; };
+		498B11F12229FF210090CDA6 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498B11F02229FF210090CDA6 /* Root.swift */; };
+		498B11F32229FF3A0090CDA6 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498B11F22229FF3A0090CDA6 /* Components.swift */; };
+		498B11F52229FF9C0090CDA6 /* Commonalities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498B11F42229FF9C0090CDA6 /* Commonalities.swift */; };
+		498B11F72229FFE90090CDA6 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498B11F62229FFE90090CDA6 /* Application.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +20,10 @@
 		490473A321FA56D0009BE7F6 /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		490473A421FA56D0009BE7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		490473AB21FA56E0009BE7F6 /* Architecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Architecture.swift; sourceTree = "<group>"; };
+		498B11F02229FF210090CDA6 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
+		498B11F22229FF3A0090CDA6 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		498B11F42229FF9C0090CDA6 /* Commonalities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commonalities.swift; sourceTree = "<group>"; };
+		498B11F62229FFE90090CDA6 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +40,6 @@
 		4904739621FA56D0009BE7F6 = {
 			isa = PBXGroup;
 			children = (
-				490473AB21FA56E0009BE7F6 /* Architecture.swift */,
 				490473A221FA56D0009BE7F6 /* Application */,
 				490473A121FA56D0009BE7F6 /* Products */,
 			);
@@ -49,10 +56,23 @@
 		490473A221FA56D0009BE7F6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				498B11F62229FFE90090CDA6 /* Application.swift */,
+				490473AB21FA56E0009BE7F6 /* Architecture.swift */,
+				498B11F42229FF9C0090CDA6 /* Commonalities.swift */,
+				498B11F22229FF3A0090CDA6 /* Components.swift */,
+				498B11F02229FF210090CDA6 /* Root.swift */,
+				498B11F8222A013F0090CDA6 /* Resources */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		498B11F8222A013F0090CDA6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				490473A321FA56D0009BE7F6 /* Application.h */,
 				490473A421FA56D0009BE7F6 /* Info.plist */,
 			);
-			path = Application;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				498B11F72229FFE90090CDA6 /* Application.swift in Sources */,
+				498B11F52229FF9C0090CDA6 /* Commonalities.swift in Sources */,
 				490473AC21FA56E0009BE7F6 /* Architecture.swift in Sources */,
+				498B11F32229FF3A0090CDA6 /* Components.swift in Sources */,
+				498B11F12229FF210090CDA6 /* Root.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +298,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Application/Info.plist;
+				INFOPLIST_FILE = Application/Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,7 +325,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Application/Info.plist;
+				INFOPLIST_FILE = Application/Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
