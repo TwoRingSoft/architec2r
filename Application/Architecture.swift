@@ -8,14 +8,28 @@
 
 import Foundation
 
-protocol MVC: Architecture, IsolatesData, IsolatesLogic, IsolatesView {}
+public protocol MVC: Architecture {
+    var model: Model { get set }
+    var view: View { get set }
+    var controller: Controller { get set }
+}
 
-protocol MVP: Architecture, IsolatesData, IsolatesPresenter, IsolatesView {}
+public protocol MVP: Architecture {
+    var model: Model { get set }
+    var view: View { get set }
+    var presenter: Presenter { get set }
+}
 
-protocol MVVM: Architecture, IsolatesData, IsolatesView {
+public protocol MVVM: Architecture {
+    var model: Model { get set }
+    var view: View { get set }
     var viewModel: ViewModel { get set }
 }
 
-protocol VIPER: Architecture, IsolatesData, IsolatesLogic, IsolatesPresenter, IsolatesView {
+public protocol VIPER: Architecture {
+    var view: View { get set }
+    var interactor: Interactor { get set }
+    var presenter: Presenter { get set }
+    var entity: Entity { get set }
     var router: Router { get set }
 }

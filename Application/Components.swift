@@ -10,23 +10,26 @@ import Foundation
 
 // Every architecture has data and view abstractions.
 
-protocol Model: Data {}
-protocol Entity: Data {}
-protocol View {}
+public protocol Model: Data {}
+public protocol Entity: Data {}
+
+public protocol View {}
 
 // MVC and VIPER isolate business logic.
 
-protocol Controller: Logic {}
-protocol Interactor: Logic {}
+public protocol Controller: Logic {
+    func start() -> UIWindow
+}
+public protocol Interactor: Logic {}
 
 // MVVM has a unique abstraction.
 
-protocol ViewModel {}
+public protocol ViewModel {}
 
 // MVP and VIPER isolate a presenter.
 
-protocol Presenter {}
+public protocol Presenter {}
 
 // VIPER has a unique abstraction.
 
-protocol Router {}
+public protocol Router {}

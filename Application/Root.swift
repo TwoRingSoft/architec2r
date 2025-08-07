@@ -8,11 +8,14 @@
 
 import Foundation
 
-// Root abstraction.
+// Root abstractions.
 
-protocol Architecture {}
+public protocol Architecture {}
+public protocol Application {
+    func start() -> UIWindow
+}
 
 // Things every application has.
 
-protocol Data {}
-protocol Logic {}
+public protocol Data {}
+public protocol Logic {}
